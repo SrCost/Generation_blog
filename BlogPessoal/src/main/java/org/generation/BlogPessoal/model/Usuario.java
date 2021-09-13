@@ -13,6 +13,23 @@ import com.sun.istack.NotNull;
 @Table(name = "tb_usuario")
 public class Usuario {
 	
+	
+	
+	public Usuario(long id, @Size(min = 2, max = 100) String nome, @Size(min = 5, max = 100) String usuario,
+			@Size(min = 2, max = 100) String senha) {
+		
+		this.id = id;
+		this.nome = nome;
+		this.usuario = usuario;
+		this.senha = senha;
+	}
+	
+	
+	
+	public Usuario() {	}
+
+
+
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private long id;
